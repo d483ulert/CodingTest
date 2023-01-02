@@ -2,10 +2,10 @@ package co_01;
 
 import java.util.Scanner;
 
-public class findCharCnt {
+public class FindCharCnt {
 
     public static void main(String[] args) {
-        findCharCnt T  =new findCharCnt();
+        FindCharCnt T  =new FindCharCnt();
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
         char t = sc.next().charAt(0);

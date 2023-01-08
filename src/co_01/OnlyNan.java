@@ -15,7 +15,7 @@ public class OnlyNan {
                 answer+=x;
             }
         }
-
+        System.out.println("*****");
         System.out.println("answer: "+answer);
     }
 }

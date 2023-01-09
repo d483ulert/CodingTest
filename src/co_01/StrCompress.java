@@ -1,25 +1,29 @@
 package co_01;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StrCompress {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String str = sc.next();
-        int cnt = 1;
-        String answer="";
 
-        for(int i =0; i<str.length()-1; i++){
-            if(str.charAt(i) == str.charAt(i+1)){
-                cnt++;
-            }
-            else{
-                answer+=str.charAt(i);
-                if(cnt> 1) answer += String.valueOf(cnt);
-                cnt=1;
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+
+        for(int i=0; i<n; i++){
+            arr[i]=sc.nextInt();
+        }
+
+        ArrayList<Integer> arrayList = new ArrayList();
+        arrayList.add(arr[0]);
+
+        for(int i=1;i<n;i++){
+            if(arr[i] > arr[i-1]){
+                arrayList.add(arr[i]);
             }
         }
-        System.out.println(answer);
+
+        System.out.println(arrayList);
     }
 }

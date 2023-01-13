@@ -11,7 +11,7 @@ public class PalindromeStr {
         int [] answer = new int[str.length()];
 
        int p = 1000;
-       for(int i=0; i<str.length(); i++){ss
+       for(int i=0; i<str.length(); i++){
            if(str.charAt(i)==c){
                p=0;
                 answer[i]=p;

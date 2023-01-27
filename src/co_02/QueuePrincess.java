@@ -18,6 +18,7 @@ public class QueuePrincess {
         for(int i=1; i<=n; i++){
             q.offer(i);
         }
+        System.out.println(q);
 
         while(!q.isEmpty()){
             for(int i=1; i<k; i++){

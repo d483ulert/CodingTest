@@ -24,6 +24,7 @@ public class QueuePrincess {
             for(int i=1; i<k; i++){
                 q.offer(q.poll());
             }
+
             q.poll();
             if(q.size()==1)
                 answer=q.poll();

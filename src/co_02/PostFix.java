@@ -28,6 +28,7 @@ public class PostFix {
                 }
             }
         }
+
         answer=stack.get(0);
 
         System.out.println(answer);

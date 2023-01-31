@@ -3,6 +3,8 @@ package dynamicPrograming;
 import java.util.Scanner;
 
 public class Stairs {
+    
+    //계단오르기
     static int[] dy;
 
     public static void main(String[] args) {

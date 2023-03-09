@@ -8,6 +8,8 @@ public class RecursiveFn {
             DFS(n/2);
             System.out.println(n%2+" ");
         }
+
+        String [] str = {};
     }
 
     public static void main(String[] args) {

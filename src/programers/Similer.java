@@ -11,13 +11,10 @@ public class Similer {
         String [] s1 = {"a", "q","b", "c"};
         String [] s2 = {"com", "z","q","b", "d", "p", "c"};
 
-        ArrayList newS1 = new ArrayList(Arrays.asList(s1));
-        ArrayList newS2 = new ArrayList(Arrays.asList(s2));
 
-
-        int cnt = (int) newS1.stream()
-                .filter(item -> newS2.stream().anyMatch(Predicate.isEqual(item)))
-                .count();
-        System.out.println(cnt);
+        ;
+        System.out.println(Arrays.asList(s1).stream()
+                .filter(item -> Arrays.asList(s2).stream().anyMatch(Predicate.isEqual(item)))
+                .count());
     }
 }

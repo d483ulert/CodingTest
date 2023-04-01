@@ -13,9 +13,7 @@ public class LowToUpper {
         for(int i=0; i<my_string.length();i++){
             if(Character.isUpperCase(c[i])){
                 c[i]= Character.toLowerCase(c[i]);
-            }
-
-            if(Character.isLowerCase(c[i])){
+            } else  if(Character.isLowerCase(c[i])){
                 c[i]=Character.toUpperCase(c[i]);
             }
         }

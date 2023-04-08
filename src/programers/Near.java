@@ -5,24 +5,13 @@ import java.util.Arrays;
 public class Near {
 
     public static void main (String[] args) {
-        int [] array = {3, 10, 28};
-        int n = 20;
-        Arrays.sort(array);
-        for(int i=0; i<array.length; i++) {
-            System.out.println(Math.abs(n - array[0]));
-            /**
-             * 20 - 3  = 17
-             */
-            System.out.println(Math.abs(n - array[i]));
-            /**
-             * 20-3 = 17
-             * 20-10 = 10
-             * 20-28 = 8
-             */
-            if (Math.abs(n - array[0]) > Math.abs(n - array[i])) {
-                array[0] = array[i];
-            }
+        int [] sides = {1,2,3};
+        int answer= 2;
+        //가장 긴 변의 길이는 다른 두 변의 길이의 합보다 작아야한다.
+        Arrays.sort(sides);
+        if(sides[0]+sides[1] > sides[2]){
+            answer = 1;
         }
-        System.out.println(array[0]);
+
     }
 }

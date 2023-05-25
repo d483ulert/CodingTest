@@ -1,26 +1,23 @@
 package programers;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 public class FruitSales {
 
     public static void main(String[] args) {
         int k = 3;
-        int m =4;
-        int [] score = {1, 2, 3, 1, 2, 3, 1};
-        int [] arr1 = new int[m];
+        int m = 4;
+        int[] score = {4, 1, 2, 2, 4, 4, 4, 4, 1, 2, 4, 2};
+        int answer =0;
+        Arrays.sort(score);
 
-        Integer[] arr2 = Arrays.stream(score).boxed().toArray(Integer[]::new);
-        Arrays.sort(arr2, Collections.reverseOrder());
-
-
-        for(int i=0; i<m; i++){
-            arr1[i] = arr2[i];
+        for(int i=score.length-1; i>=0; i--){
+            if( (score.length - i ) % m == 0){
+                answer += score[i] * m; //4개씩
+            }
         }
 
-        Arrays.sort(arr1);
 
-        arr1[0]*m
+
     }
 }

@@ -12,6 +12,7 @@ public class HamBurger {
         int sp = 0;
         for (int i : ingredient) {
             stack[sp++] = i;
+            System.out.println(sp);
             if (sp >= 4 && stack[sp - 1] == 1
                     && stack[sp - 2] == 3
                     && stack[sp - 3] == 2

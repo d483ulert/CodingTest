@@ -16,6 +16,8 @@ public class NumberMatches {
         }
 
         for(int i=0; i<Y.length(); i++){
+            System.out.println(Y.charAt(i)-48);
+
             y[Y.charAt(i)-48] +=1;
         }
 
@@ -25,12 +27,5 @@ public class NumberMatches {
             }
         }
 
-        if("".equals(sb.toString())){
-            return "-1";
-        }else if(sb.toString().charAt(0) == 48){
-            return "0";
-        }else{
-            return sb.toString();
-        }
     }
 }

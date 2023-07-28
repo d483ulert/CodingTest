@@ -2,7 +2,11 @@ package programers;
 
 public class PersonalityTypeTest {
 
-    public String asr(){
+    public static void main(String[] args) {
+        asr();
+    }
+
+    public static String asr(){
         String answer = "";
         String [] survey = {"AN", "CF", "MJ", "RT", "NA"};
         int [] choices = {5,3,2,7,5};
@@ -20,16 +24,17 @@ public class PersonalityTypeTest {
 
             int score = Math.abs(choices[i] - 4 );
 
-            switch (type){
-                case "R" : R += score; break;
-                case "T" : T += score; break;
-                case "C" : C += score; break;
-                case "F" : F += score; break;
-                case "J" : J += score; break;
-                case "A" : A += score; break;
-                case "M" : M += score; break;
-                case "N" : N += score; break;
+            switch (type) {
+                case "R" -> R += score;
+                case "T" -> T += score;
+                case "C" -> C += score;
+                case "F" -> F += score;
+                case "J" -> J += score;
+                case "A" -> A += score;
+                case "M" -> M += score;
+                case "N" -> N += score;
             }
+
             String Tp1 = "R";
             String Tp2 = "C";
             String Tp3 = "J";
@@ -39,7 +44,9 @@ public class PersonalityTypeTest {
             if(C < F) Tp2="F";
             if(J < M) Tp3="M";
             if(A < N) Tp4="N";
+
+            answer = Tp1+Tp2+Tp3+Tp4;
         }
-        return Tp1+Tp2+Tp3+Tp4;
+        return answer;
     }
 }

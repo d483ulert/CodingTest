@@ -2,6 +2,9 @@ package test;
 
 import java.io.File;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.util.Arrays.*;
@@ -57,6 +60,11 @@ public class ts
                 .sorted()
                 .forEach(System.out::println);
 
+        List<String> list = suts.map(Student::getName)
+                .collect(Collectors.toList());
 
+
+        Map<String,Person> map = personStream
+                .collect(Collectors.toMap(p->p.getPid(), p->p));
     }
 }

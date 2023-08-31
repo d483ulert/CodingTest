@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -50,8 +51,6 @@ public class ts
         Stream<String> arr = str.flatMap(Arrays::stream);
         arr.distinct()
                 .forEach(System.out::println);
-         **/
-
 
         String []  arr = {"hi my name is kim jisung, Harry Kane is Well"};
         stream(arr).flatMap(line -> Stream.of(line.split(" ")))
@@ -66,5 +65,28 @@ public class ts
 
         Map<String,Person> map = personStream
                 .collect(Collectors.toMap(p->p.getPid(), p->p));
+
+         **/
+
+        String [] strArr = {"Inheritance", "Java", "Lambda", "stream", "OptionalDouble", "IntStream", "Count","sum"};
+
+    /*
+    Stream.of(strArr)
+                .parallel()
+                .forEachOrdered(System.out::println);
+
+
+    boolean noEmptyStr = Stream.of(strArr)
+        .anyMatch(s -> s.length() == 3);
+    */
+
+        Optional<String> sWord = Stream.of(strArr)
+                .parallel()
+                .filter(s->s.charAt(0)=='s').findAny();
+
+        System.out.println(sWord.get());
+
+
+
     }
 }
